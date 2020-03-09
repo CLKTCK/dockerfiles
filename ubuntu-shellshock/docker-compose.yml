@@ -1,0 +1,6 @@
+version: '2.1'
+services:
+  shellshock: 
+    build: .
+    ports:
+      - "8181:80"

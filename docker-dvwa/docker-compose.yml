@@ -1,0 +1,18 @@
+version: '2'
+services:
+  dvwa:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - 8484:80
+    links:
+      - dvwamysql:dvwamysql
+
+  dvwamysql:
+    image: mysql:5.5
+    restart: on-failure:5
+    environment:
+      -  MYSQL_ROOT_PASSWORD=p@ssw0rd
+    volumes:
+      - ./database:/var/lib/mysql
