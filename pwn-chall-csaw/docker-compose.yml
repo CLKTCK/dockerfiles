@@ -1,0 +1,6 @@
+version: '2.1'
+services:
+  pwn-chall-csaw: 
+    build: .
+    ports:
+      - "1437:1437"
