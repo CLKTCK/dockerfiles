@@ -15,4 +15,5 @@ services:
     environment:
       -  MYSQL_ROOT_PASSWORD=p@ssw0rd
     volumes:
-      - ./database:/var/lib/mysql
+       - ./setup.sql:/docker-entrypoint-initdb.d/setup.sql
+#      - ./database:/var/lib/mysql
